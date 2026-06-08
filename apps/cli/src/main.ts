@@ -1,5 +1,6 @@
 //All npm run inside a docker container: docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app node:24-slim sh
 // npm install -D(short for --save-dev), install the tools you need when requried for compilation and testing the code
+// Node.js: Javascipt cannot read file(only for web), Node.js(docker image or idk) can achieve what it couldn't do(Dude learn more)
 
 // Run by: npm run dev -- ask "" (Check scripts in root package.json)
 
@@ -51,4 +52,9 @@ program
  * 
  * Without this line, Commander does nothing
  */
+// 1. When run "npm run dev -- ask "" ", Node.js captures those words and store them in array "process.argv"
+// program.parse() take the array and reads it (Without it, Commander has no idea what user had typed
+// 2. program.command("ask").action(async () => {...});, this code only registers the intent, doesn't run it
+// program.parse() analyze the inputs (if user type "ask"), take the <question> argument, and triggers the .action()
+// 3. handles automatic flag process (IDK wtf this is now)
 program.parse()
