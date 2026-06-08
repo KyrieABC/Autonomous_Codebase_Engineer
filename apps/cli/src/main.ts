@@ -6,8 +6,8 @@
 //Reaches into your downloaded "commander" package inside "node_modules" and extract Command class
 import { Command } from "commander"
 // Use .js beacuse Typescript does not alter import path when it compiles your code
-import {askCommand} from "./commands/ask.js"
-import {validateConfig} from "./util/config.js"
+import { askCommand } from "./commands/ask.js"
+import { validateConfig } from "./util/config.js"
 
 
 
