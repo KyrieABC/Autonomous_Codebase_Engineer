@@ -1,7 +1,7 @@
 //All npm run inside a docker container: docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app node:24-slim sh
 // npm install -D(short for --save-dev), install the tools you need when requried for compilation and testing the code
 
-// Run by: npx tsx apps/cli/src/main.ts ask ""
+// Run by: npm run dev -- ask "" (Check scripts in root package.json)
 
 //Reaches into your downloaded "commander" package inside "node_modules" and extract Command class
 import { Command } from "commander"
